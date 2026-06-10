@@ -17,7 +17,7 @@ export async function GET(request) {
     );
 
     const trackInfo = await decodeRes.json();
-    const uri = trackInfo?.uri;
+    const uri = trackInfo?.info?.uri;
 
     console.log("[stream] decoded URI:", uri?.substring(0, 100));
 
